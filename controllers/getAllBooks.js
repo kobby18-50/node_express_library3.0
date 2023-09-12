@@ -8,4 +8,13 @@ const getAllBooks =  async (req,res) => {
     res.status(StatusCodes.OK).json({books, count : books.length})
 }
 
-export default getAllBooks
+
+const getBook = async (req,res) => {
+    const {id : bookID} = req.params
+
+    const book = await Book.findOne({_id : bookID })
+
+    res.status(StatusCodes.ACCEPTED).json({book})
+}
+
+export  {getAllBooks, getBook}
