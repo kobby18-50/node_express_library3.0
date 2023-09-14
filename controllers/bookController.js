@@ -6,7 +6,7 @@ import BadRequestError from "../errors/bad-request.js"
 const getAllBooks = async (req,res) => {
     const { userId } = req.user
 
-    const books = await Book.find({createdBy : userId})
+    const books = await Book.find({createdBy : userId}).sort('-updatedAt')
 
     res.status(StatusCodes.OK).json({books, count : books.length})
 

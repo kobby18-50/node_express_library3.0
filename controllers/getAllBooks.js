@@ -3,7 +3,7 @@ import Book from "../models/Book.js"
 
 const getAllBooks =  async (req,res) => {
    
-    const books = await Book.find()
+    const books = await Book.find().sort("-updatedAt")
 
     res.status(StatusCodes.OK).json({books, count : books.length})
 }
