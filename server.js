@@ -25,6 +25,7 @@ import allbooksRoutes from './routes/allbooks.js'
 
 const app = express()
 
+app.use(express.static('./public'))
 
 app.get('/', (req,res) => {
     res.send('Home welcome')
