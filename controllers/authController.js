@@ -7,6 +7,14 @@ import jwt from 'jsonwebtoken'
 
 const register = async (req,res) => {
 
+    const email = req.body.email
+
+    const userAlreadyExits = await User.findOne({email})
+
+    if(userAlreadyExits){
+        throw new BadRequestError('User already exists create a different one with a different email')
+    }
+
     const user = await User.create({...req.body})
 
    const token = user.createJWT()
