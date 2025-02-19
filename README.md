@@ -34,7 +34,6 @@ Ensure you have the following installed:
    - Create a `.env` file in the root directory
    - Add the required variables:
      ```ini
-     PORT=5000
      MONGO_URI=your_mongodb_connection_string
      JWT_SECRET=your_secret_key
      JWT_SECRET=your_jwt_secret
