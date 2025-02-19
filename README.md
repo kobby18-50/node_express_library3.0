@@ -1,7 +1,7 @@
 # Library Application
 
 ## Overview
-This is a full-stack library application built with Node.js, Express, and MongoDB. The app allows users to browse, purchase, and manage books seamlessly.
+This is a full-stack library application built with Node.js, Express, and MongoDB. The app allows users to browse, read, and manage books seamlessly.
 
 ## Features
 - User authentication (Sign up, Login, Logout)
